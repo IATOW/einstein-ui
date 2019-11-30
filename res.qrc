@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/new/combo">
+        <file>icons/icons8-down-button-24.png</file>
+    </qresource>
+</RCC>

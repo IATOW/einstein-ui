@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>930</width>
+    <height>566</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>930</width>
+    <height>566</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>930</width>
+    <height>566</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton
+{
+	border-radius: 15px;
+	height: 30px;
+	background-color: #edd0be;
+}
+
+#widget
+{
+	border-right: 2px solid rgb(244, 54, 54);
+}
+
+#widget_2
+{
+	border-left: 2px solid rgb(37, 198, 252);
+}
+
+QLabel,
+QPushButton
+{
+	color: black;
+	font-size: 16px;
+	font-family: &quot;consolas&quot;;
+}
+
+QPushButton:hover
+{
+	background-color: #ffcea6;
+}
+
+QPushButton:disabled
+{
+	background-color: lightgrey;
+	color: #aaa;
+}
+
+QTextEdit
+{
+	border: none;
+}
+
+QComboBox
+{
+	padding-left: 10px;
+	border-radius: 15px;
+	background-color: darkgrey;
+}
+
+QComboBox::drop-down
+{
+	subcontrol-origin: padding;
+	subcontrol-position: top right;
+	background-color: #edd0be;
+	width: 30px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+QComboBox::drop-down:hover
+{
+	background-color: #ffcea6;
+}
+
+QComboBox::drop-down:disabled
+{
+	background-color: lightgrey;
+}
+
+QComboBox::down-arrow
+{
+	image: url(&quot;:/new/combo/icons/icons8-down-button-24.png&quot;);
+}
+
+QComboBox QAbstractItemView
+{
+	border: none;
+	margin: 0px;
+}
+
+QComboBox QAbstractItemView::item
+{
+	padding: 2px 10px;
+	background-color: lightgrey;
+	outline: 0px;
+}
+
+QComboBox QAbstractItemView::item:selected
+{
+	background-color: #edd0be;
+}
+
+QMenuBar
+{
+	background-color: white;
+}
+
+QMenuBar::item
+{
+	padding: 5px 10px;
+	background: transparent;
+	margin-bottom: 0px;
+}
+
+QMenuBar::item:selected
+{
+	background-color: #edd0be;
+}
+
+#MainWindow
+{
+	background-color: white;
+}
+
+QMenu
+{
+	margin: 0px;
+}
+
+QMenu::item
+{
+	padding-left: 15px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-right: 20px;
+	border-left: 5px solid #edd0be;
+	background-color: white;
+}
+
+QMenu::item:selected
+{
+	border-left: 5px solid #ffcea6;
+	background-color: #edd0be;
+}
+
+QScrollBar
+{
+	background-color: lightgrey;
+	width: 2px;
+	border-radius: 1px;
+}
+
+QScrollBar::handle
+{
+	background-color: #ffcea6;
+}
+
+QTextEdit
+{
+	border-left: 2px solid #edd0be;
+	font-family: &quot;consolas&quot;;
+	padding-left: 3px;
+}
+
+QLCDNumber
+{
+	color: #ff6e97;
+	border: 1px solid #edd0be;
+	border-radius: 15px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>20</y>
+      <width>181</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="formLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>161</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>layout:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="layoutR">
+        <property name="text">
+         <string>123456</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="loadEngineR">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>161</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-left: 3px solid #e03636;</string>
+     </property>
+     <property name="text">
+      <string>Load Engine</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="unloadEngineR">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>200</y>
+       <width>161</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-left: 3px solid #e03636;</string>
+     </property>
+     <property name="text">
+      <string>Unload Engine</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="redName">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>151</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 25px;</string>
+     </property>
+     <property name="text">
+      <string>red</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>280</y>
+      <width>181</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="formLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>161</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="formLayout_2">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>layout:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="layoutB">
+        <property name="text">
+         <string>123456</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="loadEngineB">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>161</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-right: 3px solid #25c6fc;</string>
+     </property>
+     <property name="text">
+      <string>Load Engine</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="unloadEngineB">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>200</y>
+       <width>161</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-right: 3px solid #25c6fc;</string>
+     </property>
+     <property name="text">
+      <string>Unload Engine</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="blueName">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>151</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 25px;</string>
+     </property>
+     <property name="text">
+      <string>blue</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>171</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAsNeeded</enum>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;</string>
+    </property>
+    <property name="text">
+     <string>information：</string>
+    </property>
+   </widget>
+   <widget class="Board" name="board" native="true">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>20</y>
+      <width>500</width>
+      <height>500</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>500</width>
+      <height>500</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1000</width>
+      <height>1000</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>366</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;</string>
+    </property>
+    <property name="text">
+     <string>dice</string>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcdNumber">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>400</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+    <property name="smallDecimalPoint">
+     <bool>false</bool>
+    </property>
+    <property name="digitCount">
+     <number>1</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+    <property name="value" stdset="0">
+     <double>1.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="randomDiceButton">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>400</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>random</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="chooseDiceButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>490</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>choose</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>490</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: &quot;consolas&quot;;</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>6</string>
+     </property>
+    </item>
+   </widget>
+   <zorder>widget_2</zorder>
+   <zorder>widget</zorder>
+   <zorder>textEdit</zorder>
+   <zorder>label_11</zorder>
+   <zorder>board</zorder>
+   <zorder>label_12</zorder>
+   <zorder>lcdNumber</zorder>
+   <zorder>randomDiceButton</zorder>
+   <zorder>chooseDiceButton</zorder>
+   <zorder>comboBox</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>930</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>game</string>
+    </property>
+    <addaction name="action_new_game"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>edit</string>
+    </property>
+    <addaction name="action_clear"/>
+    <addaction name="action_setup"/>
+   </widget>
+   <widget class="QMenu" name="menufile">
+    <property name="title">
+     <string>file</string>
+    </property>
+    <addaction name="actionsave_log"/>
+   </widget>
+   <widget class="QMenu" name="menuhelp">
+    <property name="title">
+     <string>about</string>
+    </property>
+    <addaction name="action_how_to_use"/>
+    <addaction name="actionabout"/>
+   </widget>
+   <addaction name="menufile"/>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menuhelp"/>
+  </widget>
+  <action name="action_clear">
+   <property name="text">
+    <string>clear</string>
+   </property>
+  </action>
+  <action name="action_setup">
+   <property name="text">
+    <string>set up</string>
+   </property>
+  </action>
+  <action name="action_AI_vs_AI">
+   <property name="text">
+    <string>AI vs AI</string>
+   </property>
+  </action>
+  <action name="action_AI_vs_human_AI_red">
+   <property name="text">
+    <string>AI vs human (AI is red)</string>
+   </property>
+  </action>
+  <action name="action_human_vs_human">
+   <property name="text">
+    <string>human vs human</string>
+   </property>
+  </action>
+  <action name="action_AI_vs_human_AI_blue">
+   <property name="text">
+    <string>AI vs human (AI is blue)</string>
+   </property>
+  </action>
+  <action name="action_new_game">
+   <property name="text">
+    <string>new game</string>
+   </property>
+  </action>
+  <action name="actionsave_log">
+   <property name="text">
+    <string>save log</string>
+   </property>
+  </action>
+  <action name="action_how_to_use">
+   <property name="text">
+    <string>how to use</string>
+   </property>
+  </action>
+  <action name="actionabout">
+   <property name="text">
+    <string>about</string>
+   </property>
+  </action>
+  <action name="action_reset">
+   <property name="text">
+    <string>reset</string>
+   </property>
+  </action>
+  <action name="action_AI_vs_AI_auto">
+   <property name="text">
+    <string>AI vs AI auto</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>Board</class>
+   <extends>QWidget</extends>
+   <header>board.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
