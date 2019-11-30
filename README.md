@@ -6,6 +6,7 @@ an user interface for einstein game
 clone this repo
 cd einstein-ui
 mkdir build
+cd build
 qmake -o Makefile ../einstein_ui.pro
 make
 ```
