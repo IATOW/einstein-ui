@@ -1,7 +1,11 @@
 # einstein_ui
 an user interface for einstein game
 
-## build
+## 准备
+Qt（qmake）  
+make
+
+## 编译
 ```bash
 clone this repo
 cd einstein-ui
